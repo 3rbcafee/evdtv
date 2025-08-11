@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    { "source": "/:channel.m3u8", "destination": "/api/proxy?channel=:channel" },
+    { "source": "/resource", "destination": "/api/proxy" }
+  ],
+  "functions": {
+    "api/proxy.js": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  }
+}
